@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Gentlemen's Club | Premium Barbershop</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+:root{--bg:#11110f;--surface:#1b1b18;--gold:#c6a66b;--cream:#eee9df;--muted:#a39e94}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;line-height:1.6}a{text-decoration:none;color:inherit}button{font:inherit;cursor:pointer}.container{width:min(1150px,90%);margin:auto}
+header{position:fixed;top:0;width:100%;z-index:100;background:rgba(17,17,15,.94);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff12}nav{height:82px;display:flex;align-items:center;justify-content:space-between}.logo{font-family:'Playfair Display',serif;font-size:23px;letter-spacing:2px}.logo span{color:var(--gold)}.nav-links{display:flex;gap:32px;list-style:none;font-size:13px;color:var(--muted)}.nav-links a:hover{color:var(--gold)}.nav-button{padding:12px 22px;background:var(--gold);color:#111;font-weight:700;font-size:12px;letter-spacing:1px}.menu-toggle{display:none;color:var(--cream);background:none;border:none;font-size:26px}
+.hero{min-height:780px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(12,12,11,.96),rgba(12,12,11,.68),rgba(12,12,11,.2)),url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=2000&q=85') center/cover;padding-top:80px}.hero-content{max-width:680px}.eyebrow{color:var(--gold);letter-spacing:4px;font-size:11px;font-weight:700;margin-bottom:25px}.hero h1{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,88px);line-height:1.08;font-weight:400;margin-bottom:25px}.hero h1 span{color:var(--gold)}.hero p{color:#c5c0b6;max-width:480px;font-size:15px;margin-bottom:35px}.primary-btn{display:inline-block;background:var(--gold);color:#111;padding:16px 29px;font-size:12px;font-weight:700;letter-spacing:1.5px;transition:.3s;border:1px solid var(--gold)}.primary-btn:hover{background:transparent;color:var(--gold)}.secondary-btn{display:inline-block;border:1px solid #ffffff60;padding:16px 29px;margin-left:12px;font-size:12px;letter-spacing:1px}.secondary-btn:hover{border-color:var(--gold);color:var(--gold)}
+section{padding:105px 0}.section-heading{text-align:center;margin-bottom:55px}.section-heading h2{font-family:'Playfair Display',serif;font-size:43px;font-weight:400}.section-heading p{color:var(--muted);margin-top:10px;font-size:14px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.about-image img{width:100%;height:460px;object-fit:cover}.about-text h2{font-family:'Playfair Display',serif;font-size:44px;font-weight:400;line-height:1.2;margin-bottom:25px}.about-text p{color:var(--muted);margin-bottom:20px;font-size:14px}.stats{display:flex;gap:40px;margin-top:35px}.stat h3{font-family:'Playfair Display',serif;color:var(--gold);font-size:32px}.stat p{font-size:11px}
+.services,.reviews{background:var(--surface)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.service-card{padding:35px;border:1px solid #ffffff15;background:#171714;transition:.3s}.service-card:hover{transform:translateY(-7px);border-color:var(--gold)}.service-icon{font-size:30px;margin-bottom:25px}.service-card h3{font-family:'Playfair Display',serif;font-size:24px;margin-bottom:12px}.service-card p{color:var(--muted);font-size:13px;min-height:65px}.price{color:var(--gold);font-size:20px;margin-top:20px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.gallery-grid img{width:100%;height:300px;object-fit:cover;transition:.4s}.gallery-grid img:hover{transform:scale(1.025)}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.review-card{padding:30px;background:#141412;border:1px solid #ffffff12}.stars{color:var(--gold);letter-spacing:4px;margin-bottom:18px}.review-card p{color:#c6c0b5;font-size:14px;margin-bottom:22px}.review-card h4{font-size:13px}
+.booking{background:linear-gradient(#11110fe8,#11110fe8),url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1800') center/cover}.booking-box{max-width:720px;margin:auto;padding:45px;background:#1b1b18;border:1px solid #c6a66b55}.booking-box h2{font-family:'Playfair Display',serif;font-size:37px;font-weight:400;text-align:center;margin-bottom:30px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}input,select{width:100%;padding:15px;background:#11110f;border:1px solid #ffffff25;color:white;outline:none}input:focus,select:focus{border-color:var(--gold)}.full{grid-column:1/-1}.booking-box button{width:100%;margin-top:20px;border:none}#booking-message{text-align:center;color:var(--gold);margin-top:15px;font-size:13px}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.contact-info h3{font-family:'Playfair Display',serif;font-size:32px;margin-bottom:20px}.contact-info p{color:var(--muted);margin:13px 0;font-size:14px}.map-placeholder{background:#24241f;min-height:260px;display:flex;align-items:center;justify-content:center;color:var(--gold);text-align:center;border:1px solid #ffffff12}
+footer{padding:35px 0;border-top:1px solid #ffffff15;text-align:center;color:var(--muted);font-size:12px}footer span{color:var(--gold)}
+@media(max-width:768px){.nav-links{display:none;position:absolute;top:82px;left:0;width:100%;background:#171714;flex-direction:column;padding:30px;gap:22px}.nav-links.active{display:flex}.menu-toggle{display:block}.nav-button{display:none}.hero{min-height:680px}.about-grid,.contact-grid{grid-template-columns:1fr}.service-grid,.review-grid,.gallery-grid{grid-template-columns:1fr}.gallery-grid img{height:350px}.stats{gap:25px}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.booking-box{padding:25px}section{padding:75px 0}.hero h1{font-size:55px}}
+</style>
+</head>
+<body>
+<header><div class="container"><nav>
+<a href="#" class="logo">THE GENTLEMEN'S <span>CLUB.</span></a>
+<ul class="nav-links" id="navLinks"><li><a href="#home">HOME</a></li><li><a href="#about">ABOUT</a></li><li><a href="#services">SERVICES</a></li><li><a href="#gallery">GALLERY</a></li><li><a href="#contact">CONTACT</a></li></ul>
+<a href="#booking" class="nav-button">BOOK AN APPOINTMENT</a><button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle navigation">☰</button>
+</nav></div></header>
+<main>
+<section class="hero" id="home"><div class="container"><div class="hero-content"><div class="eyebrow">EST. 2018 — VAUGHAN, ONTARIO</div><h1>THE ART OF A<br><span>PERFECT CUT.</span></h1><p>More than just a haircut. Experience premium grooming, expert craftsmanship, and an atmosphere designed for the modern gentleman.</p><a href="#booking" class="primary-btn">BOOK YOUR EXPERIENCE</a><a href="#services" class="secondary-btn">EXPLORE SERVICES</a></div></div></section>
+<section id="about"><div class="container about-grid"><div class="about-image"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900" alt="Professional barber working"></div><div class="about-text"><div class="eyebrow">OUR PHILOSOPHY</div><h2>Where tradition meets modern style.</h2><p>At The Gentlemen's Club, we believe every gentleman deserves to look and feel his best.</p><p>Our experienced barbers combine traditional techniques with modern styling to deliver an experience that goes beyond the ordinary.</p><div class="stats"><div class="stat"><h3>8+</h3><p>YEARS EXPERIENCE</p></div><div class="stat"><h3>5K+</h3><p>HAPPY CLIENTS</p></div><div class="stat"><h3>5.0</h3><p>CLIENT RATING</p></div></div></div></div></section>
+<section class="services" id="services"><div class="container"><div class="section-heading"><div class="eyebrow">WHAT WE OFFER</div><h2>Our Services</h2><p>Precision, quality, and attention to every detail.</p></div><div class="service-grid">
+<div class="service-card"><div class="service-icon">✂</div><h3>Classic Haircut</h3><p>A tailored haircut designed around your face shape and personal style.</p><div class="price">$35</div></div>
+<div class="service-card"><div class="service-icon">◈</div><h3>Skin Fade</h3><p>A clean, detailed fade with precision blending and sharp finishing.</p><div class="price">$40</div></div>
+<div class="service-card"><div class="service-icon">♧</div><h3>Beard Grooming</h3><p>Professional beard shaping, trimming, and detailed line-ups.</p><div class="price">$25</div></div>
+<div class="service-card"><div class="service-icon">✦</div><h3>Hair & Beard</h3><p>The complete grooming experience with a haircut and beard treatment.</p><div class="price">$55</div></div>
+<div class="service-card"><div class="service-icon">◉</div><h3>Hot Towel Shave</h3><p>A traditional hot towel treatment and relaxing straight razor shave.</p><div class="price">$30</div></div>
+<div class="service-card"><div class="service-icon">✧</div><h3>Premium Package</h3><p>Haircut, beard treatment, hot towel, and finishing products.</p><div class="price">$75</div></div>
+</div></div></section>
+<section id="gallery"><div class="container"><div class="section-heading"><div class="eyebrow">OUR WORK</div><h2>The Gallery</h2><p>Every cut tells a story.</p></div><div class="gallery-grid">
+<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=700" alt="Barber haircut"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=700" alt="Barbershop interior"><img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=700" alt="Barber at work">
+</div></div></section>
+<section class="reviews"><div class="container"><div class="section-heading"><div class="eyebrow">CLIENT EXPERIENCES</div><h2>What Our Clients Say</h2></div><div class="review-grid">
+<div class="review-card"><div class="stars">★★★★★</div><p>"Best barbershop I've been to. The attention to detail is incredible and the atmosphere is amazing."</p><h4>— Michael R.</h4></div>
+<div class="review-card"><div class="stars">★★★★★</div><p>"Consistently great haircuts. The barbers actually listen to what you want."</p><h4>— Daniel K.</h4></div>
+<div class="review-card"><div class="stars">★★★★★</div><p>"Professional service from start to finish. Definitely worth every dollar."</p><h4>— Adam S.</h4></div>
+</div></div></section>
+<section class="booking" id="booking"><div class="container"><div class="booking-box"><div class="eyebrow" style="text-align:center">YOUR NEXT EXPERIENCE</div><h2>Book An Appointment</h2><form id="bookingForm"><div class="form-grid">
+<input type="text" placeholder="Full Name" required aria-label="Full Name"><input type="email" placeholder="Email Address" required aria-label="Email Address"><input type="tel" placeholder="Phone Number" required aria-label="Phone Number">
+<select required aria-label="Select a Service"><option value="">Select a Service</option><option>Classic Haircut - $35</option><option>Skin Fade - $40</option><option>Beard Grooming - $25</option><option>Hair & Beard - $55</option><option>Hot Towel Shave - $30</option><option>Premium Package - $75</option></select>
+<input type="date" id="bookingDate" required aria-label="Appointment Date"><select required aria-label="Select a Time"><option value="">Select a Time</option><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option></select>
+</div><button type="submit" class="primary-btn">REQUEST APPOINTMENT</button><div id="booking-message" role="status"></div></form></div></div></section>
+<section id="contact"><div class="container contact-grid"><div class="contact-info"><div class="eyebrow">FIND US</div><h3>Visit The Shop</h3><p>📍 123 Main Street, Vaughan, Ontario</p><p>☎ (416) 555-0198</p><p>✉ info@gentlemensclub.ca</p><br><h3>Opening Hours</h3><p>Monday – Friday: 9 AM – 7 PM</p><p>Saturday: 9 AM – 6 PM</p><p>Sunday: 10 AM – 4 PM</p></div><div class="map-placeholder"><div><div style="font-size:40px">⌖</div><p>THE GENTLEMEN'S CLUB</p><p>Vaughan, Ontario</p></div></div></div></section>
+</main>
+<footer><div class="container">© 2026 THE GENTLEMEN'S CLUB. ALL RIGHTS RESERVED.<br><br>Designed with <span>precision.</span></div></footer>
+<script>
+function toggleMenu(){document.getElementById('navLinks').classList.toggle('active')}
+document.querySelectorAll('.nav-links a').forEach(link=>link.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('active')));
+const dateInput=document.getElementById('bookingDate');
+const today=new Date();
+const localDate=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().split('T')[0];
+dateInput.min=localDate;
+document.getElementById('bookingForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('booking-message').textContent='Thank you! Your appointment request has been received (demo only).';this.reset();dateInput.min=localDate;});
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.style.opacity='1';entry.target.style.transform='translateY(0)';}})},{threshold:.12});
+document.querySelectorAll('.service-card,.review-card,.about-text,.about-image').forEach(element=>{element.style.opacity='0';element.style.transform='translateY(25px)';element.style.transition='all .7s ease';observer.observe(element);});
+</script>
+</body>
+</html>
